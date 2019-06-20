@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity,Button} from 'react-native'
 import {connect} from 'react-redux'
 import * as Action from './action'
+import {sendGA} from "../utils/decorator";
 
+@sendGA("/test")
 export default class CounterApp extends Component<any, any> {
     constructor(props: any) {
         super(props)
@@ -30,11 +32,16 @@ export default class CounterApp extends Component<any, any> {
                 <TouchableOpacity onPress={() => getUserInfo()}>
                     <Text>更改名称</Text>
                 </TouchableOpacity>
+                <Button
+                    title="去第二个页面"
+                    onPress={() => this.props.navigation.navigate("One")}
+                />
 
             </View>
         )
     }
 }
+
 
 
 const mapStateToProps = (state: any) => {
@@ -62,6 +69,7 @@ export default CounterApp = connect(
     mapStateToProps,
     mapDispatchToProps
 )(CounterApp)
+
 
 
 const styles = StyleSheet.create({

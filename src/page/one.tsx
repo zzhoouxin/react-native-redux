@@ -4,6 +4,11 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 
 export default class App extends Component {
+
+  componentDidMount(){
+    console.log("111")
+  }
+
   render() {
     return (
       <View style={styles.container}>

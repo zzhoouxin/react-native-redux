@@ -4076,7 +4076,7 @@ metro-react-native-babel-preset@0.51.1:
 
 metro-react-native-babel-preset@^0.54.1:
   version "0.54.1"
-  resolved "https://registry.npm.taobao.org/metro-react-native-babel-preset/download/metro-react-native-babel-preset-0.54.1.tgz#b8f03865c381841d7f8912e7ba46804ea3a928b8"
+  resolved "http://registry.npm.ihomefnt.org/metro-react-native-babel-preset/-/metro-react-native-babel-preset-0.54.1.tgz#b8f03865c381841d7f8912e7ba46804ea3a928b8"
   integrity sha1-uPA4ZcOBhB1/iRLnukaATqOpKLg=
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.0.0"
