@@ -2,10 +2,8 @@ import React, {Component} from 'react'
 import {View, Text, StyleSheet, TouchableOpacity,Button} from 'react-native'
 import {connect} from 'react-redux'
 import * as Action from './action'
-import {sendGA} from "../utils/decorator";
 
-@sendGA("/test")
-export default class CounterApp extends Component<any, any> {
+ class CounterApp extends Component<any, any> {
     constructor(props: any) {
         super(props)
 
@@ -60,12 +58,11 @@ const mapDispatchToProps = (dispatch: any) => {
         },
         getUserInfo: () => {
             return dispatch(Action.fetch())
-
         }
     }
 }
 
-export default CounterApp = connect(
+export default  connect(
     mapStateToProps,
     mapDispatchToProps
 )(CounterApp)

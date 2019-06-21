@@ -2,8 +2,8 @@ import React from "react";
 import { Component } from 'react';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import { Provider } from 'react-redux';
-import Home from './home/home';
-import One from './page/one';
+import Home from './home';
+import One from './page';
 import store from './home/store'
 
 

@@ -14,12 +14,15 @@
     "react-navigation": "^3.10.1",
     "react-redux": "^7.1.0",
     "redux": "^4.0.1",
+    "redux-actions": "^2.6.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
+    "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/runtime": "^7.4.4",
     "@types/react": "^16.8.20",
     "@types/react-native": "^0.57.63",
@@ -28,9 +31,9 @@
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.54.1",
-    "@babel/plugin-proposal-decorators": "^7.4.4",
     "react-native-typescript-transformer": "^1.2.12",
     "react-test-renderer": "16.8.3",
+    "tslib": "^1.10.0",
     "typescript": "^3.5.2"
   },
   "babel": {

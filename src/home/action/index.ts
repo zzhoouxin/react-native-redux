@@ -31,8 +31,6 @@ function fetch() {
         dispatch(getUserInfo(res))
 
     }
-
-
 }
 
 
@@ -42,7 +40,6 @@ function webApi() {
             resvole({name: "33333"})
         }, 100)
     })
-
 }
 
 
