@@ -7,7 +7,7 @@ import {handleActions} from 'redux-actions';
 
 
 interface stateType {
-    count?:number
+    dataList?:any
 }
 
 interface actionType {
@@ -17,24 +17,16 @@ interface actionType {
 
 
 
-
-const defaultState = { count: 1 ,name:""}
+const defaultState = { dataList:[]}
 const oneReducers = {}
 
-oneReducers['INCREMENT_2'] = (state:stateType, action:actionType) => {
+
+oneReducers['INIT_DATALIST'] = (state:stateType,action:actionType) => {
     return {
         ...state,
-        count: state.count + action.payload
+        dataList: action.payload
     }
 }
-
-oneReducers['DECREMENT_2'] = (state:stateType) => {
-    return {
-        ...state,
-        count: state.count - 1
-    }
-}
-
 
 
 

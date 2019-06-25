@@ -1,11 +1,17 @@
 import React, {Component} from 'react'
-import {View, Text, StyleSheet, TouchableOpacity,Button} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity, Button} from 'react-native'
 import {connect} from 'react-redux'
 import * as Action from './action'
 
- class CounterApp extends Component<any, any> {
+
+class CounterApp extends Component<any, any> {
     constructor(props: any) {
         super(props)
+    }
+
+
+    componentDidMount(): void {
+
 
     }
 
@@ -41,7 +47,6 @@ import * as Action from './action'
 }
 
 
-
 const mapStateToProps = (state: any) => {
     return {
         value: state.counter,
@@ -62,11 +67,10 @@ const mapDispatchToProps = (dispatch: any) => {
     }
 }
 
-export default  connect(
+export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(CounterApp)
-
 
 
 const styles = StyleSheet.create({

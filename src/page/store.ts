@@ -1,23 +1,19 @@
+import Api from './webApi';
+
+
 /**
  * store层做大量的计算操作
  * 异步请求等都在这边进行计算处理
  */
-const fetch = async () => {
-    let res = await webApi();
-    return res;
-}
-
-const webApi = async () => {
-    return new Promise((resvole) => {
-        setTimeout(() => {
-            resvole(11)
-        }, 100)
-    })
+const initDataList = async () => {
+    let res:any = await Api.one();
+    if (res && res.code !== 1) return false;
+    let {houseList} = res.obj;
+    return houseList;
 }
 
 
 const AppStore = {
-    fetch, webApi
+    initDataList
 }
-
 export default AppStore

@@ -2,23 +2,31 @@ import React, {Component} from "react";
 import {StyleSheet, Text, View} from "react-native";
 import {connect} from "react-redux";
 
-class Number extends Component {
+
+interface IProps {
+    value: any,
+}
+
+class List extends Component<IProps, any> {
     constructor(props) {
         super(props);
     }
 
 
+
     render() {
-        const {value} = this.props as any;
+        const {value} = this.props;
         return (
             <View style={styles.container}>
-
-                <Text>{value.count}</Text>
+                {
+                    value.dataList.map((item) => {
+                        return <Text key={item.buildingId}>{item.buildingName}</Text>
+                    })
+                }
             </View>
         )
     }
 }
-
 
 
 const mapStateToProps = (state) => {
@@ -26,7 +34,7 @@ const mapStateToProps = (state) => {
         value: state.counter2
     }
 }
-export default connect(mapStateToProps, null)(Number)
+export default connect(mapStateToProps, null)(List)
 
 
 const styles = StyleSheet.create({

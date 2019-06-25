@@ -1,57 +1,54 @@
 import React, {Component} from "react";
-import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {StyleSheet, View} from "react-native";
 import actionCreators from "./action/action";
 import {connect} from "react-redux";
-import Number from './components/number';
+import List from './components/list';
 
-class App extends Component {
+
+interface IProps {
+    value: any,
+    initDataList: () => void
+}
+
+
+class App extends Component<IProps, any> {
     constructor(props) {
         super(props);
     }
 
     componentDidMount() {
+        this.props.initDataList();
     }
 
     render() {
-        const { decrement, increment} = this.props as any;
         return (
             <View style={styles.container}>
-                <TouchableOpacity
-                    onPress={() => increment()}>
-                    <Text>+</Text>
-                </TouchableOpacity>
-                <Number/>
-                <TouchableOpacity
-                    onPress={() => decrement()}>
-                    <Text>-</Text>
-                </TouchableOpacity>
-
-
+                <List/>
             </View>
         )
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        increment: () => {
-            dispatch(actionCreators.increment())
-        },
-        decrement: () => {
-            dispatch(actionCreators.decrement())
-        },
 
+const mapStateToProps = (state) => {
+    return {
+        value: state.counter2
     }
 }
 
-export default connect(
-    null,
-    mapDispatchToProps
-)(App)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        initDataList: () => {
+            dispatch(actionCreators.initDataList())
+        }
+    }
+}
+
+export default connect( mapStateToProps,mapDispatchToProps)(App)
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection:"row",
+        flexDirection: "row",
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
