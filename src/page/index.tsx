@@ -3,6 +3,7 @@ import {StyleSheet, View} from "react-native";
 import actionCreators from "./action/action";
 import {connect} from "react-redux";
 import List from './components/list';
+import sendGA from './../utils/decorator'
 
 
 interface IProps {
@@ -11,11 +12,29 @@ interface IProps {
 }
 
 
+const mapStateToProps  = (state) => {
+    return {
+        value: state.counter2
+    }
+}
+
+const mapDispatchToProps  = (dispatch) => {
+    return {
+        initDataList: () => {
+            dispatch(actionCreators.initDataList())
+        }
+    }
+}
+
+
+
+
+// @connect<any,any>(mapStateToProps , mapDispatchToProps)
+@sendGA("/1111")
 class App extends Component<IProps, any> {
     constructor(props) {
         super(props);
     }
-
     componentDidMount() {
         this.props.initDataList();
     }
@@ -28,21 +47,7 @@ class App extends Component<IProps, any> {
         )
     }
 }
-
-
-const mapStateToProps = (state) => {
-    return {
-        value: state.counter2
-    }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        initDataList: () => {
-            dispatch(actionCreators.initDataList())
-        }
-    }
-}
+// export default App
 
 export default connect( mapStateToProps,mapDispatchToProps)(App)
 

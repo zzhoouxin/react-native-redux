@@ -6,10 +6,13 @@
  * @param value
  * @returns {Function}
  */
-export const sendGA = (value:string)=>{
+ const sendGA = (value:string)=>{
     return function(){
         console.log("打点的页面为------>",value)
     }
 }
+
+
+export default sendGA;
 
 
