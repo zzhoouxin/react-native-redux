@@ -1,5 +1,5 @@
 import {createAction} from 'redux-actions';
-import Store from './../store';
+import Store from '../store';
 
 /**
  * 这边作为action层

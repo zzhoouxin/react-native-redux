@@ -18,9 +18,10 @@ class List extends Component<IProps, any> {
         const {value} = this.props;
         return (
             <View style={styles.container}>
+                <Text style={styles.firstTitle}>下面的数据是模拟异步请求的</Text>
                 {
                     value.dataList.map((item) => {
-                        return <Text key={item.buildingId}>{item.buildingName}</Text>
+                        return <Text key={item.id}>{item.name}</Text>
                     })
                 }
             </View>
@@ -64,5 +65,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         width: 150,
         height: 30
+    },
+    firstTitle:{
+        color: "red",
+        marginBottom:10
     }
 });

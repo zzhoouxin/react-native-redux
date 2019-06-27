@@ -3,21 +3,30 @@ import {StyleSheet, View} from "react-native";
 import actionCreators from "./action/action";
 import {connect} from "react-redux";
 import List from './components/list';
-import sendGA from './../utils/decorator'
+import {loadingComponents} from './../../utils/decorator/decorator';
 
 
 interface IProps {
     value: any,
-    initDataList: () => void
+    initDataList: () => void,
+    setSuccessPage: () => void,
 }
 
 
+/**
+ * 这边用来注入数据源
+ * @param state
+ */
 const mapStateToProps  = (state) => {
     return {
         value: state.counter2
     }
 }
 
+/**
+ * 这边用来注入action
+ * @param state
+ */
 const mapDispatchToProps  = (dispatch) => {
     return {
         initDataList: () => {
@@ -27,16 +36,16 @@ const mapDispatchToProps  = (dispatch) => {
 }
 
 
-
-
-// @connect<any,any>(mapStateToProps , mapDispatchToProps)
-@sendGA("/1111")
+@loadingComponents
 class App extends Component<IProps, any> {
     constructor(props) {
         super(props);
     }
     componentDidMount() {
         this.props.initDataList();
+        setTimeout(()=>{
+            this.props.setSuccessPage()
+        },1000)
     }
 
     render() {
@@ -47,9 +56,7 @@ class App extends Component<IProps, any> {
         )
     }
 }
-// export default App
-
-export default connect( mapStateToProps,mapDispatchToProps)(App)
+export default connect(mapStateToProps,mapDispatchToProps)(App)
 
 const styles = StyleSheet.create({
     container: {

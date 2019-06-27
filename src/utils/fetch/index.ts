@@ -32,15 +32,13 @@ const Common = async <T = any>(input: RequestInfo, init?: RequestInit): Promise<
         return responseData;
     } catch (error) {
         clearTimeout(timeoutId);
-        // const msgText: string = '网络请求失败,请检查网络';
-        // return {code: -1, obj: null, ext: {msg: msgText}};
+        const msgText: string = '网络请求失败,请检查网络';
+        return <any>{code: -1, obj: null, ext: {msg: msgText}};
     }
 };
 
 const Post = <T>(url: string, body?: object) => {
     let postUrl = config.HOST + url;
-    // console.warn('请求接口地址------:' + postUrl);
-    // console.warn('请求接口参数------:' + JSON.stringify(body));
     return Common<T>(postUrl, {method: 'POST', body: JSON.stringify(body)});
 };
 

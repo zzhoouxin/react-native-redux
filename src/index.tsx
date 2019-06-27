@@ -1,10 +1,28 @@
 import React from "react";
 import { Component } from 'react';
 import { createStackNavigator, createAppContainer } from "react-navigation";
+import Home from './page/home';
+import One from './page/one';
 import { Provider } from 'react-redux';
-import Home from './home';
-import One from './page';
-import store from './home/store'
+import store from './_redux';
+
+
+
+/**
+ * 注册路由信息
+ * @type {NavigationContainer}
+ */
+const RootStack = createStackNavigator(
+    {
+        Home: Home,
+        One: One
+    },
+    {
+        initialRouteName: "Home"
+    }
+);
+
+const AppContainer = createAppContainer(RootStack);
 
 
 export default class App extends Component {
@@ -18,19 +36,5 @@ export default class App extends Component {
   }
 }
 
-/**
- * 路由
- * @type {NavigationContainer}
- */
-const RootStack = createStackNavigator(
-    {
-        Home: Home,
-        One: One
-    },
-    {
-        initialRouteName: "One"
-    }
-);
 
-const AppContainer = createAppContainer(RootStack);
 
