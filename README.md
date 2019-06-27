@@ -1,5 +1,5 @@
 # react-native-redux
-在react-native 应用中使用redux 以及redux各个中间件的使用
+在react-native 应用中使用redux 以及redux各个中间件。新手可学习
 
 ## 技术支持
 - 使用：`React-native`、`React-Navigtion`、`redux`、`react-redux`、`redux-actions`、`redux-promise`、`redux-thunk`
@@ -7,8 +7,9 @@
 
 ## 运行步骤
 1. `npm install`  ——下载依赖
-2. `npm start` ——启动服务
-3. `react-native run-ios`  ——启动ios模拟器
+2. `react-native link react-native-gesture-handler`  ——link所有原生依赖
+3. `npm start` ——启动服务
+4. `react-native run-ios`  ——启动ios模拟器
 
 
 
