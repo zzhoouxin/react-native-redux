@@ -57,8 +57,6 @@ export const loadingComponents = WrappedComponent => {
         setSuccessPage: this.setSuccessPage,
         setErrorPage: this.setErrorPage
       };
-      debugger;
-
       return (
         <View style={{ flex: 1 }}>
           <WrappedComponent {...newProps} />

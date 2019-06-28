@@ -15,11 +15,6 @@ class List extends Component<IProps, any> {
 
   render() {
     const { value, addData } = this.props;
-
-    if (foo == NaN) {
-      // ...
-    }
-
     return (
       <View style={styles.container}>
         <Text style={styles.firstTitle}>下面的 数据是模拟异步请求的</Text>
