@@ -31,7 +31,13 @@
     "@types/react-redux": "^7.1.0",
     "@types/redux": "^3.6.0",
     "babel-jest": "^24.8.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^2.7.0",
     "jest": "^24.8.0",
+    "lint-staged": "^8.2.1",
     "metro-react-native-babel-preset": "^0.54.1",
     "prettier": "^1.18.2",
     "react-native-typescript-transformer": "^1.2.12",
@@ -51,5 +57,16 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "npm run format",
+      "git add"
+    ]
   }
 }
