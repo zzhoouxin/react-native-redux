@@ -20,7 +20,7 @@ export default class Index extends Component<any, any> {
             <View style={styles.item} key={item.id}>
               <Text
                 onPress={() => this._jump(item.url)}
-                style={{ color: 'black' }}
+                style={{ color: "black" }}
               >
                 {item.name}
               </Text>
