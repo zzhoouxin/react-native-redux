@@ -1,18 +1,52 @@
-import React, { useState } from "react";
-import { Text, View } from "react-native";
+import React, { Component } from "react";
+import { StyleSheet, View, Text, Dimensions } from "react-native";
+const fill_width = Dimensions.get("window").width;
+const dataList = [
+  { id: 1, name: "useState正常使用", url: "HookUsState" },
+  { id: 2, name: "hook自定义函数提取公共函数", url: "HookUsState2" }
+];
 
-export default function greeting() {
-  const [count, setCount] = useState(0);
-  return (
-    <View>
-      <Text>{count}</Text>
-      <Text
-        onPress={() => {
-          setCount(count + 1);
-        }}
-      >
-        点击加1
-      </Text>
-    </View>
-  );
+export default class Hook extends Component<any, any> {
+  constructor(props: any) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        {dataList.map(item => {
+          return (
+            <View style={styles.item} key={item.id}>
+              <Text
+                onPress={() => this._jump(item.url)}
+                style={{ color: "black" }}
+              >
+                {item.name}
+              </Text>
+            </View>
+          );
+        })}
+      </View>
+    );
+  }
+
+  _jump = url => {
+    this.props.navigation.navigate(url);
+  };
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "#DEDEDE"
+  },
+  item: {
+    height: 30,
+    width: fill_width - 20,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 5,
+    backgroundColor: "#FFFFFF"
+  }
+});
