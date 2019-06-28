@@ -1,10 +1,12 @@
 import React, {Component} from "react";
-import {StyleSheet, Text, View} from "react-native";
+import {Button, StyleSheet, Text, View} from "react-native";
 import {connect} from "react-redux";
+import actionCreators from "./../action/action";
 
 
 interface IProps {
     value: any,
+    addData: () => void
 }
 
 class List extends Component<IProps, any> {
@@ -13,9 +15,8 @@ class List extends Component<IProps, any> {
     }
 
 
-
     render() {
-        const {value} = this.props;
+        const {value, addData} = this.props;
         return (
             <View style={styles.container}>
                 <Text style={styles.firstTitle}>下面的数据是模拟异步请求的</Text>
@@ -24,6 +25,9 @@ class List extends Component<IProps, any> {
                         return <Text key={item.id}>{item.name}</Text>
                     })
                 }
+                <Button title={"异步添加数据"} onPress={() => {
+                    addData()
+                }}/>
             </View>
         )
     }
@@ -35,7 +39,19 @@ const mapStateToProps = (state) => {
         value: state.counter2
     }
 }
-export default connect(mapStateToProps, null)(List)
+
+/**
+ * 这边用来注入action
+ * @param state
+ */
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addData: () => {
+            dispatch(actionCreators.addData())
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(List)
 
 
 const styles = StyleSheet.create({
@@ -66,8 +82,8 @@ const styles = StyleSheet.create({
         width: 150,
         height: 30
     },
-    firstTitle:{
+    firstTitle: {
         color: "red",
-        marginBottom:10
+        marginBottom: 10
     }
 });

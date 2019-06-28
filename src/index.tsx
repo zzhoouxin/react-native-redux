@@ -4,6 +4,7 @@ import { createStackNavigator, createAppContainer } from "react-navigation";
 import Home from './page/home';
 import Index from './page/Index';
 import One from './page/one';
+import Hook from './page/hook';
 import { Provider } from 'react-redux';
 import store from './_redux';
 
@@ -17,7 +18,8 @@ const RootStack = createStackNavigator(
     {
         Home: Home,
         One: One,
-        Index:Index
+        Index:Index,
+        Hook:Hook
     },
     {
         initialRouteName: "Index"

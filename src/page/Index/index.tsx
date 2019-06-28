@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import {StyleSheet, View, Text, Dimensions} from "react-native";
 const fill_width = Dimensions.get('window').width;
-const dataList = [{id: 1, name: "常规使用redux",url:"Home"}, {id: 2, name: "使用redux-actions处理异步数据",url:"One"}]
+const dataList = [{id: 1, name: "常规使用redux",url:"Home"}, {id: 2, name: "使用redux-actions处理异步数据",url:"One"},
+    {id: 3, name: "使用hook",url:"Hook"},]
 
 export default class Index extends Component<any,any>{
 

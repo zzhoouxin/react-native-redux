@@ -8,9 +8,11 @@ import Store from '../store';
 
 const initDataList = createAction('INIT_DATALIST',Store.initDataList);
 
+const addData = createAction('ADD_DATA',Store.addData);
+
 
 const actionCreators = {
-    initDataList
+    initDataList,addData
 }
 
 export default actionCreators

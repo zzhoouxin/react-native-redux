@@ -28,6 +28,15 @@ oneReducers['INIT_DATALIST'] = (state:stateType,action:actionType) => {
     }
 }
 
+oneReducers['ADD_DATA'] = (state:stateType,action:actionType) => {
+    return {
+        ...state,
+        dataList: state.dataList.concat(action.payload)
+    }
+}
+
+
+
 
 
 const reducer = handleActions(oneReducers, defaultState);

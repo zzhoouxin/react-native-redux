@@ -15,7 +15,23 @@ const initDataList = async () => {
 }
 
 
+
+/**
+ * 点击异步正价额外的数据
+ * 异步请求等都在这边进行计算处理
+ */
+const addData = async () => {
+    return new Promise((resvole) => {
+        let dataList = {id: Math.random(), name: `这是额外添加的数据${Math.random()}`}
+        setTimeout(() => {
+            resvole(dataList)
+        }, 100)
+    })
+}
+
+
+
 const AppStore = {
-    initDataList
+    initDataList,addData
 }
 export default AppStore
