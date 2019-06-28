@@ -1,43 +1,35 @@
-import {handleActions} from 'redux-actions';
+import { handleActions } from "redux-actions";
 
 /**
  * 这边是reducer层
  * 创建数据的地方-当然可以多个reducer
  */
 
-
 interface stateType {
-    dataList?:any
+  dataList?: any;
 }
 
 interface actionType {
-    type?:string,
-    payload?:any
+  type?: string;
+  payload?: any;
 }
 
+const defaultState = { dataList: [] };
+const oneReducers = {};
 
+oneReducers["INIT_DATALIST"] = (state: stateType, action: actionType) => {
+  return {
+    ...state,
+    dataList: action.payload
+  };
+};
 
-const defaultState = { dataList:[]}
-const oneReducers = {}
-
-
-oneReducers['INIT_DATALIST'] = (state:stateType,action:actionType) => {
-    return {
-        ...state,
-        dataList: action.payload
-    }
-}
-
-oneReducers['ADD_DATA'] = (state:stateType,action:actionType) => {
-    return {
-        ...state,
-        dataList: state.dataList.concat(action.payload)
-    }
-}
-
-
-
-
+oneReducers["ADD_DATA"] = (state: stateType, action: actionType) => {
+  return {
+    ...state,
+    dataList: state.dataList.concat(action.payload)
+  };
+};
 
 const reducer = handleActions(oneReducers, defaultState);
 

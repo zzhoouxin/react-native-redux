@@ -3,9 +3,9 @@
  * 在redurce里面switch用到的
  */
 const Constants = {
-  INCREASE: 'INCREASE',
-  DECREASE: 'DECREASE',
-  USERINFO: 'USERINFO'
-}
+  INCREASE: "INCREASE",
+  DECREASE: "DECREASE",
+  USERINFO: "USERINFO"
+};
 
-export {Constants}
+export { Constants };
