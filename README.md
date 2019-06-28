@@ -1,5 +1,7 @@
 # react-native-redux
-在react-native 应用中使用redux 以及redux各个中间件。新手可学习
+在react-native 应用中使用redux 以及redux各个中间件。
+增加了代码规范的辅助功能--如pretter 和eslint的代码检查
+husky和lint-staged在提交代码时候进行代码格式统一处理
 
 ## 技术支持
 - 使用：`React-native`、`React-Navigtion`、`redux`、`react-redux`、`redux-actions`、`redux-promise`、`redux-thunk`
