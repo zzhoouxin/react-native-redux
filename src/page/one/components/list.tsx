@@ -17,7 +17,7 @@ class List extends Component<IProps, any> {
     const { value, addData } = this.props;
     return (
       <View style={styles.container}>
-        <Text style={styles.firstTitle}>下面的数据是模拟异步请求的</Text>
+        <Text style={styles.firstTitle}>下面的 数据是模拟异步请求的</Text>
         {value.dataList.map(item => {
           return <Text key={item.id}>{item.name}</Text>;
         })}
