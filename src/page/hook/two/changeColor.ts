@@ -5,9 +5,9 @@ import { useState } from "react";
  * @param colors
  * @param initColor
  */
-export const useRandomColor = (colors, initColor) => {
+export const useRandomColor = (colors: string[], initColor: string) => {
   const lenColors = colors.length;
-  const [color, setColor] = useState(initColor);
+  const [color, setColor] = useState<string>(initColor);
   const changeColor = () => {
     const index = Math.floor(Math.random() * lenColors);
     setColor(colors[index]);

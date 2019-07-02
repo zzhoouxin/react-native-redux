@@ -2,14 +2,12 @@ import React, { Component } from "react";
 import { StyleSheet, View, Text, Dimensions } from "react-native";
 const fill_width = Dimensions.get("window").width;
 const dataList = [
-  { id: 1, name: "常规使用redux", url: "Home" },
-  { id: 2, name: "使用redux-actions处理异步数据", url: "One" },
-  { id: 3, name: "使用hook", url: "Hook" },
-  { id: 4, name: "艾佳页面demo", url: "Modal" },
-  { id: 5, name: "高阶组件HOC", url: "HocAll" }
+  { id: 1, name: "高价组件的loading", url: "HocLoading" },
+  { id: 2, name: "抽离出去state", url: "HocLoading2" },
+  { id: 3, name: "在一个loading", url: "HocLoading3" }
 ];
 
-export default class Index extends Component<any, any> {
+export default class Hook extends Component<any, any> {
   constructor(props: any) {
     super(props);
   }

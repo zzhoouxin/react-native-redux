@@ -3,7 +3,6 @@ import { StyleSheet, View } from "react-native";
 import actionCreators from "./action/action";
 import { connect } from "react-redux";
 import List from "./components/list";
-import { loadingComponents } from "./../../utils/decorator/decorator";
 
 interface IProps {
   value: any;
@@ -33,16 +32,12 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-@loadingComponents
 class App extends Component<IProps, any> {
   constructor(props) {
     super(props);
   }
   componentDidMount() {
     this.props.initDataList();
-    setTimeout(() => {
-      this.props.setSuccessPage();
-    }, 1000);
   }
 
   render() {

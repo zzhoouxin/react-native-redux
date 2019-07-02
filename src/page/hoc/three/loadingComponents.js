@@ -1,27 +1,25 @@
 import React, { Component } from "react";
 import { View, Text } from "react-native";
 
-/**
- * 修饰器通用的处理方式
- * @param value
- * @returns {Function}
- */
 export const sendGA = value => {
-  return function() {
-    console.log("打点的页面为------>", value);
+  return function(WrappedComponent) {
+    class NewComponent extends Component {
+      constructor(props) {
+        super(props);
+        console.log("发送的内容", value);
+      }
+      render() {
+        return <WrappedComponent {...this.props} />;
+      }
+    }
+    return NewComponent;
   };
 };
 
-/**
- * 用来显示网络加载状态的修饰器
- * @param WrappedComponent
- * @return {NewComponent}
- */
 export const loadingComponents = WrappedComponent => {
   class NewComponent extends Component {
     constructor(props) {
       super(props);
-
       this.state = {
         ...this.state,
         isFirstLoad: true,
