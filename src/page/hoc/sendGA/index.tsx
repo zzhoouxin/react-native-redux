@@ -9,6 +9,10 @@ import { sendGaComponents } from "./sendGaComponents";
 
 @sendGaComponents("配置埋点的内容")
 class HocLoading extends Component<any, any> {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
