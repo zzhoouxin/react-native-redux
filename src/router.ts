@@ -6,10 +6,9 @@ import Hook from "./page/hook"; //hook的主页
 import { ColoreBanner } from "./page/hook/one"; //hook基本的改变颜色
 import { ColoreBanner2 } from "./page/hook/two"; //自定义hook提取公共方法
 import Modal from "./page/aijia/modal"; //编写modal的类
-import HocLoading from "./page/hoc/one"; //编写modal的类
+import loading from "./page/hoc/loading"; //编写modal的类
 import HocLoading2 from "./page/hoc/two";
-import HocLoading3 from "./page/hoc/three";
-// import {TextInputComponent} from "./page/hoc/three";
+import sendGA from "./page/hoc/sendGA";
 import HocAll from "./page/hoc";
 
 /**
@@ -25,10 +24,10 @@ const RootStack = createStackNavigator(
     HookUsState: ColoreBanner,
     HookUsState2: ColoreBanner2,
     Modal: Modal,
-    HocLoading: HocLoading,
+    publicLoading: loading,
     HocLoading2: HocLoading2,
     HocAll: HocAll,
-    HocLoading3: HocLoading3
+    sendGA: sendGA
   },
   {
     initialRouteName: "Index"

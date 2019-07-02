@@ -2,18 +2,7 @@ import React, { Component } from "react";
 import { View, Text } from "react-native";
 
 export const sendGA = value => {
-  return function(WrappedComponent) {
-    class NewComponent extends Component {
-      constructor(props) {
-        super(props);
-        console.log("发送的内容", value);
-      }
-      render() {
-        return <WrappedComponent {...this.props} />;
-      }
-    }
-    return NewComponent;
-  };
+  return function(WrappedComponent) {};
 };
 
 export const loadingComponents = WrappedComponent => {
@@ -70,7 +59,7 @@ export const loadingComponents = WrappedComponent => {
                 alignItems: "center"
               }}
             >
-              <Text>加载中。。。。。。</Text>
+              <Text>这是一个loading的页面-可控制关闭</Text>
             </View>
           )}
           {isFirstLoad === false && loadError ? (

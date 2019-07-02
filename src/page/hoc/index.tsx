@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { StyleSheet, View, Text, Dimensions } from "react-native";
 const fill_width = Dimensions.get("window").width;
 const dataList = [
-  { id: 1, name: "高价组件的loading", url: "HocLoading" },
+  { id: 1, name: "公共loading修饰器", url: "publicLoading" },
   { id: 2, name: "抽离出去state", url: "HocLoading2" },
-  { id: 3, name: "在一个loading", url: "HocLoading3" }
+  { id: 3, name: "埋点的修饰器编写", url: "sendGA" }
 ];
 
 export default class Hook extends Component<any, any> {
