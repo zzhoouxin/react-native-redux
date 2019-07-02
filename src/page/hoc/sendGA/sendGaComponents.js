@@ -11,6 +11,10 @@ import { View, Text } from "react-native";
 export const sendGaComponents = value => {
   return function(WrappedComponent) {
     class NewComponent extends WrappedComponent {
+      constructor(props) {
+        super(props);
+        console.log("这边就是埋点的值了=====>", value);
+      }
       render() {
         // return <WrappedComponent {...this.props} />;
         return super.render();
