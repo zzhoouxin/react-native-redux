@@ -1,11 +1,17 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Dimensions } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Dimensions,
+  TouchableOpacity
+} from "react-native";
 const fill_width = Dimensions.get("window").width;
 const dataList = [
   { id: 1, name: "常规使用redux", url: "Home" },
   { id: 2, name: "使用redux-actions处理异步数据", url: "One" },
   { id: 3, name: "使用hook", url: "Hook" },
-  { id: 4, name: "艾佳页面demo", url: "Modal" },
+  { id: 4, name: "艾佳页面demo", url: "AiJia" },
   { id: 5, name: "高阶组件HOC", url: "HocAll" }
 ];
 
@@ -19,14 +25,13 @@ export default class Index extends Component<any, any> {
       <View style={styles.container}>
         {dataList.map(item => {
           return (
-            <View style={styles.item} key={item.id}>
-              <Text
-                onPress={() => this._jump(item.url)}
-                style={{ color: "black" }}
-              >
-                {item.name}
-              </Text>
-            </View>
+            <TouchableOpacity
+              style={styles.item}
+              key={item.id}
+              onPress={() => this._jump(item.url)}
+            >
+              <Text style={{ color: "black" }}>{item.name}</Text>
+            </TouchableOpacity>
           );
         })}
       </View>

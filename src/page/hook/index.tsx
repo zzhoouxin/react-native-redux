@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Dimensions } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Dimensions,
+  TouchableOpacity
+} from "react-native";
 const fill_width = Dimensions.get("window").width;
 const dataList = [
   { id: 1, name: "useState正常使用", url: "HookUsState" },
@@ -16,14 +22,13 @@ export default class Hook extends Component<any, any> {
       <View style={styles.container}>
         {dataList.map(item => {
           return (
-            <View style={styles.item} key={item.id}>
-              <Text
-                onPress={() => this._jump(item.url)}
-                style={{ color: "black" }}
-              >
-                {item.name}
-              </Text>
-            </View>
+            <TouchableOpacity
+              style={styles.item}
+              key={item.id}
+              onPress={() => this._jump(item.url)}
+            >
+              <Text style={{ color: "black" }}>{item.name}</Text>
+            </TouchableOpacity>
           );
         })}
       </View>

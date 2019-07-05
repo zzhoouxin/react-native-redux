@@ -10,6 +10,13 @@ import loading from "./page/hoc/loading"; //编写modal的类
 import HocLoading2 from "./page/hoc/two";
 import sendGA from "./page/hoc/sendGA";
 import HocAll from "./page/hoc";
+import AiJia from "./page/aijia";
+import Rotate from "./page/aijia/Animated/rotate"; //旋转的动画
+import StraightLine from "./page/aijia/Animated/straightLine"; //直线运动
+import spring from "./page/aijia/Animated/spring"; //放大效果
+import allControl from "./page/aijia/Animated/allControl"; //全部控制
+import Continue from "./page/aijia/Animated/continue"; //持续的动画
+import dontKonw from "./page/aijia/Animated/dontKonw"; //全部控制
 
 /**
  * 注册路由信息
@@ -27,7 +34,14 @@ const RootStack = createStackNavigator(
     publicLoading: loading,
     HocLoading2: HocLoading2,
     HocAll: HocAll,
-    sendGA: sendGA
+    sendGA: sendGA,
+    Animated: Rotate,
+    AiJia: AiJia,
+    StraightLine: StraightLine,
+    spring: spring,
+    allControl: allControl,
+    Continue: Continue,
+    dontKonw: dontKonw
   },
   {
     initialRouteName: "Index"

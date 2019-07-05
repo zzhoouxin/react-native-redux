@@ -8,9 +8,13 @@ import {
 } from "react-native";
 const fill_width = Dimensions.get("window").width;
 const dataList = [
-  { id: 1, name: "公共loading修饰器", url: "publicLoading" },
-  { id: 2, name: "抽离出去state", url: "HocLoading2" },
-  { id: 3, name: "埋点的修饰器编写", url: "sendGA" }
+  { id: 1, name: "modal的页面", url: "Modal" },
+  { id: 2, name: "旋转的动画", url: "Animated" },
+  { id: 3, name: "直线运动", url: "StraightLine" },
+  { id: 4, name: "放大效果", url: "spring" },
+  { id: 5, name: "几个动画一起控制", url: "allControl" },
+  { id: 6, name: "持续的动画", url: "Continue" },
+  { id: 7, name: "先看看", url: "dontKonw" }
 ];
 
 export default class Hook extends Component<any, any> {
