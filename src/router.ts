@@ -12,6 +12,8 @@ import sendGA from "./page/hoc/sendGA";
 import HocAll from "./page/hoc";
 import Breathe from "./page/hoc/breathe";
 import InheritanceInversion from "./page/hoc/InheritanceInversion"; //继承反转
+import renderHijack from "./page/hoc/renderHijack"; //渲染劫持
+
 import AiJia from "./page/aijia";
 import Rotate from "./page/aijia/Animated/rotate"; //旋转的动画
 import StraightLine from "./page/aijia/Animated/straightLine"; //直线运动
@@ -47,7 +49,8 @@ const RootStack = createStackNavigator(
     dontKonw: dontKonw,
     zhouxin: zhouxin,
     Breathe: Breathe,
-    InheritanceInversion: InheritanceInversion
+    InheritanceInversion: InheritanceInversion,
+    renderHijack: renderHijack
   },
   {
     initialRouteName: "Index"

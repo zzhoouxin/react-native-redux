@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { View, Text } from "react-native";
+// import React, { Component } from "react";
+// import { View, Text } from "react-native";
 
 /**
  * 这边有2个写法
@@ -9,7 +9,7 @@ import { View, Text } from "react-native";
  * @returns {function(*): NewComponent}
  */
 export const sendGaComponents = value => {
-  return function(WrappedComponent) {
+  return WrappedComponent =>
     class NewComponent extends WrappedComponent {
       constructor(props) {
         super(props);
@@ -19,7 +19,5 @@ export const sendGaComponents = value => {
         // return <WrappedComponent {...this.props} />;
         return super.render();
       }
-    }
-    return NewComponent;
-  };
+    };
 };

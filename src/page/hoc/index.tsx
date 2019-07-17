@@ -12,7 +12,8 @@ const dataList = [
   { id: 2, name: "抽离出去state", url: "HocLoading2" },
   { id: 3, name: "埋点的修饰器编写", url: "sendGA" },
   { id: 4, name: "呼吸的动画", url: "Breathe" },
-  { id: 5, name: "继承反转", url: "InheritanceInversion" }
+  { id: 5, name: "继承反转", url: "InheritanceInversion" },
+  { id: 6, name: "渲染劫持", url: "renderHijack" }
 ];
 
 export default class Hook extends Component<any, any> {
