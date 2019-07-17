@@ -1,10 +1,5 @@
 import React from "react";
 import { Animated, Easing, StyleSheet, View, Text } from "react-native";
-
-/**
- * 旋转的动画
- */
-
 export default class FadeInView extends React.Component<any, any> {
   constructor(props) {
     super(props);
@@ -105,7 +100,5 @@ export default class FadeInView extends React.Component<any, any> {
 const styles = StyleSheet.create({
   container: {
     flex: 1
-    // alignItems: "center",
-    // justifyContent: "center",
   }
 });

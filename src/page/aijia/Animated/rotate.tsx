@@ -5,14 +5,13 @@ import { Animated, Easing, StyleSheet, View } from "react-native";
  * 旋转的动画
  */
 
-export default class FadeInView extends React.Component<any, any> {
+export default class Rotate extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
       spinValue: new Animated.Value(0)
     };
   }
-
   componentDidMount() {
     this.spin();
   }
@@ -21,10 +20,12 @@ export default class FadeInView extends React.Component<any, any> {
     this.state.spinValue.setValue(0);
     Animated.timing(this.state.spinValue, {
       toValue: 1,
-      duration: 4000,
+      duration: 3000,
       easing: Easing.linear
       // delay:1000
-    }).start(() => this.spin());
+    }).start(() => {
+      this.spin();
+    });
   }
 
   render() {

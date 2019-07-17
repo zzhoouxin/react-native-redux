@@ -14,7 +14,8 @@ const dataList = [
   { id: 4, name: "放大效果", url: "spring" },
   { id: 5, name: "几个动画一起控制", url: "allControl" },
   { id: 6, name: "持续的动画", url: "Continue" },
-  { id: 7, name: "先看看", url: "dontKonw" }
+  { id: 7, name: "先看看", url: "dontKonw" },
+  { id: 8, name: "zhouxin", url: "zhouxin" }
 ];
 
 export default class Hook extends Component<any, any> {

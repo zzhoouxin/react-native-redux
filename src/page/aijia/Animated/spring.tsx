@@ -19,11 +19,11 @@ export default class FadeInView extends React.Component<any, any> {
   }
 
   spring() {
-    this.state.springValue.setValue(0.3);
+    this.state.springValue.setValue(0);
     Animated.spring(this.state.springValue, {
-      toValue: 1,
-      friction: 1
-      // tension:1
+      toValue: 1, //放大的值:越大放大越大
+      friction: 1, //摩擦力:越大就越不能晃动的厉害
+      tension: 1 //张力:越大就越有弹性-生动点
     }).start();
   }
 

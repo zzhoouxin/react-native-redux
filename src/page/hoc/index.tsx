@@ -10,7 +10,9 @@ const fill_width = Dimensions.get("window").width;
 const dataList = [
   { id: 1, name: "公共loading修饰器", url: "publicLoading" },
   { id: 2, name: "抽离出去state", url: "HocLoading2" },
-  { id: 3, name: "埋点的修饰器编写", url: "sendGA" }
+  { id: 3, name: "埋点的修饰器编写", url: "sendGA" },
+  { id: 4, name: "呼吸的动画", url: "Breathe" },
+  { id: 5, name: "继承反转", url: "InheritanceInversion" }
 ];
 
 export default class Hook extends Component<any, any> {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Text, TextInput, View } from "react-native";
-import { ExtractStateHOC } from "./loadingComponents";
+import { ExtractStateHOC } from "./ExtractStateHOC";
 
 class TextInputComponent extends Component<any, any> {
   constructor(props) {

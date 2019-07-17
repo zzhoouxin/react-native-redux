@@ -3,11 +3,9 @@ import React, { Component } from "react";
 import { Animated, StyleSheet, View } from "react-native";
 
 const arr = [];
-
-for (let i = 0; i < 500; i++) {
+for (let i = 0; i < 200; i++) {
   arr.push(i);
 }
-
 export default class animations extends Component<any, any> {
   constructor(props) {
     super(props);
@@ -25,15 +23,20 @@ export default class animations extends Component<any, any> {
   }
 
   animate() {
+    this.state.animatedValue.map(c => {
+      c.setValue(0);
+    });
     const animations = arr.map(item => {
       return Animated.timing(this.state.animatedValue[item], {
         toValue: 1,
 
-        duration: 4000
+        duration: 1000
       });
     });
 
-    Animated.stagger(10, animations).start();
+    Animated.stagger(10, animations).start(() => {
+      this.animate();
+    });
   }
 
   render() {
@@ -42,7 +45,10 @@ export default class animations extends Component<any, any> {
         <Animated.View
           key={i}
           style={{
-            opacity: this.state.animatedValue[a],
+            opacity: this.state.animatedValue[a].interpolate({
+              inputRange: [0, 0.5, 1],
+              outputRange: [0, 1, 0.3]
+            }),
             height: 20,
             width: 20,
             backgroundColor: "red",
@@ -60,9 +66,7 @@ export default class animations extends Component<any, any> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
     flexDirection: "row",
-
     flexWrap: "wrap"
   }
 });

@@ -9,7 +9,6 @@ const arr = [];
 for (let i = 0; i < 500; i++) {
   arr.push(i);
 }
-
 export default class FadeInView extends React.Component<any, any> {
   constructor(props) {
     super(props);
@@ -29,7 +28,7 @@ export default class FadeInView extends React.Component<any, any> {
     const animations = arr.map(item => {
       return Animated.timing(this.state.animatedValue[item], {
         toValue: 1,
-        duration: 10
+        duration: 100
       });
     });
 
