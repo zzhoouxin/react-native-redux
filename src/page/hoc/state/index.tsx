@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Text, TextInput, View } from "react-native";
 import { ExtractStateHOC } from "./ExtractStateHOC";
 
+import { route } from "../../../common/util/annotation";
+@route("HOC高阶组件", "HocAll", "抽离State", "takeOutState")
+@ExtractStateHOC
 class TextInputComponent extends Component<any, any> {
   constructor(props) {
     super(props);

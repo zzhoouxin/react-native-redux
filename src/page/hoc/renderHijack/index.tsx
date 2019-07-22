@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { View, Text } from "react-native";
 import { hijackRenderHoc } from "./hijack";
-
+import { route } from "../../../common/util/annotation";
 @hijackRenderHoc({ type: "add-style", style: { backgroundColor: "red" } })
-class InheritanceInversion extends Component<any, any> {
+@route("HOC高阶组件", "HocAll", "渲染劫持", "renderHijack")
+class renderHijack extends Component<any, any> {
   state = {
     name: "zhouxin"
   };
@@ -21,4 +22,4 @@ class InheritanceInversion extends Component<any, any> {
   }
 }
 
-export default InheritanceInversion;
+export default renderHijack;

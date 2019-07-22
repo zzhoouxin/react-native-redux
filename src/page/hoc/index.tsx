@@ -6,6 +6,9 @@ import {
   Dimensions,
   TouchableOpacity
 } from "react-native";
+
+import { route } from "../../common/util/annotation";
+
 const fill_width = Dimensions.get("window").width;
 const dataList = [
   { id: 1, name: "公共loading修饰器", url: "publicLoading" },
@@ -16,7 +19,8 @@ const dataList = [
   { id: 6, name: "渲染劫持", url: "renderHijack" }
 ];
 
-export default class Hook extends Component<any, any> {
+@route("HOC高阶组件", "HocAll")
+export default class HOC extends Component<any, any> {
   constructor(props: any) {
     super(props);
   }

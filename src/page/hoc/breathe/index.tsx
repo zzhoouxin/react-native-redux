@@ -1,8 +1,10 @@
 import React from "react";
 import { Animated, View } from "react-native";
 import { WithLoading } from "./withLoading";
+import { route } from "../../../common/util/annotation";
 
 @WithLoading()
+@route("HOC高阶组件", "HocAll", "公共的呼吸组件", "breathe")
 class Test extends React.PureComponent<any, any> {
   render() {
     const { opacity } = this.props;

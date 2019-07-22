@@ -7,6 +7,8 @@ import {
   TouchableOpacity
 } from "react-native";
 const fill_width = Dimensions.get("window").width;
+import { zhouxin } from "../../common/util/annotation";
+
 const dataList = [
   { id: 1, name: "常规使用redux", url: "Home" },
   { id: 2, name: "使用redux-actions处理异步数据", url: "One" },
@@ -18,6 +20,7 @@ const dataList = [
 export default class Index extends Component<any, any> {
   constructor(props: any) {
     super(props);
+    zhouxin();
   }
 
   render() {

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
 import { sendGaComponents } from "./sendGaComponents";
+import { route } from "../../../common/util/annotation";
 
 /**
  * 这边页面是做埋点的测试demo
@@ -8,6 +9,7 @@ import { sendGaComponents } from "./sendGaComponents";
  */
 
 @sendGaComponents("配置埋点的内容")
+@route("HOC高阶组件", "HocAll", "打点操作", "HocLoading")
 class HocLoading extends Component<any, any> {
   constructor(props) {
     super(props);

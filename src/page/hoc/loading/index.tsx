@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
 import { loadingComponents } from "./loadingComponents";
-
+import { route } from "../../../common/util/annotation";
 /**
  * 这边页面作为高阶组件编写了一个关于公共加载的loading组件
  */
 
 @loadingComponents
+@route("HOC高阶组件", "HocAll", "loding动画", "HocLoading")
 class HocLoading extends Component<any, any> {
   constructor(props: any) {
     super(props);
