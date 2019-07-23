@@ -9,6 +9,8 @@ const arr = [];
 for (let i = 0; i < 500; i++) {
   arr.push(i);
 }
+import { route } from "../../../common/util/annotation";
+@route("艾佳页面", "AiJia", "持续动画", "Continue")
 export default class FadeInView extends React.Component<any, any> {
   constructor(props) {
     super(props);

@@ -1,15 +1,15 @@
 import React, { PureComponent } from "react";
 import {
-  Text,
-  View,
-  Modal,
   Button,
   Image,
+  Modal,
+  Text,
   TouchableHighlight,
-  TouchableOpacity,
-  AsyncStorage
+  View
 } from "react-native";
+import { route } from "../../../common/util/annotation";
 
+@route("艾佳页面", "AiJia", "modal页面", "Modal")
 export default class index extends PureComponent<any, any> {
   constructor(props) {
     super(props);

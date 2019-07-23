@@ -6,6 +6,8 @@ const arr = [];
 for (let i = 0; i < 200; i++) {
   arr.push(i);
 }
+import { route } from "../../../common/util/annotation";
+@route("艾佳页面", "AiJia", "很多一起的动画", "dontKonw")
 export default class animations extends Component<any, any> {
   constructor(props) {
     super(props);

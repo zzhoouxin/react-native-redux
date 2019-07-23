@@ -1,6 +1,8 @@
 import React from "react";
 import { Animated } from "react-native";
 
+import { route } from "../../../common/util/annotation";
+@route("艾佳页面", "AiJia", "zhouxin", "zhouxin")
 export default class FadeInView extends React.Component {
   state = {
     fadeInOpacity: new Animated.Value(0) // 透明度初始值设为0

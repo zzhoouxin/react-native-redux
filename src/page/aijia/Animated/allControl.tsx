@@ -11,8 +11,9 @@ import {
 /**
  * 旋转的动画
  */
-
-export default class FadeInView extends React.Component<any, any> {
+import { route } from "../../../common/util/annotation";
+@route("艾佳页面", "AiJia", "组合动画", "allControl")
+export default class allControl extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {

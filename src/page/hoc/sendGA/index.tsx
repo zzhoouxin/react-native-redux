@@ -9,7 +9,7 @@ import { route } from "../../../common/util/annotation";
  */
 
 @sendGaComponents("配置埋点的内容")
-@route("HOC高阶组件", "HocAll", "打点操作", "HocLoading")
+@route("HOC高阶组件", "HocAll", "打点操作", "sendGA")
 class HocLoading extends Component<any, any> {
   constructor(props) {
     super(props);

@@ -6,19 +6,12 @@ import {
   Dimensions,
   TouchableOpacity
 } from "react-native";
-const fill_width = Dimensions.get("window").width;
-const dataList = [
-  { id: 1, name: "modal的页面", url: "Modal" },
-  { id: 2, name: "旋转的动画", url: "Animated" },
-  { id: 3, name: "直线运动", url: "StraightLine" },
-  { id: 4, name: "放大效果", url: "spring" },
-  { id: 5, name: "几个动画一起控制", url: "allControl" },
-  { id: 6, name: "持续的动画", url: "Continue" },
-  { id: 7, name: "先看看", url: "dontKonw" },
-  { id: 8, name: "zhouxin", url: "zhouxin" }
-];
+import { route } from "../../common/util/annotation";
 
-export default class Hook extends Component<any, any> {
+const fill_width = Dimensions.get("window").width;
+import RouteContainer from "../../common/util/routeContainer";
+@route("艾佳页面", "AiJia")
+class AiJia extends Component<any, any> {
   constructor(props: any) {
     super(props);
   }
@@ -26,14 +19,14 @@ export default class Hook extends Component<any, any> {
   render() {
     return (
       <View style={styles.container}>
-        {dataList.map(item => {
+        {RouteContainer["艾佳页面"].routes.map((item, index) => {
           return (
             <TouchableOpacity
               style={styles.item}
-              key={item.id}
-              onPress={() => this._jump(item.url)}
+              key={index}
+              onPress={() => this._jump(item.routerName)}
             >
-              <Text style={{ color: "black" }}>{item.name}</Text>
+              <Text style={{ color: "black" }}>{item.title}</Text>
             </TouchableOpacity>
           );
         })}
@@ -45,6 +38,8 @@ export default class Hook extends Component<any, any> {
     this.props.navigation.navigate(url);
   };
 }
+
+export default AiJia;
 
 const styles = StyleSheet.create({
   container: {

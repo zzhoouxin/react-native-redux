@@ -1,10 +1,7 @@
 import React from "react";
 import { Animated, StyleSheet, Text, View } from "react-native";
-
-/**
- * 旋转的动画
- */
-
+import { route } from "../../../common/util/annotation";
+@route("艾佳页面", "AiJia", "放大的动画", "spring")
 export default class FadeInView extends React.Component<any, any> {
   constructor(props) {
     super(props);

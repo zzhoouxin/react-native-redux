@@ -1,10 +1,11 @@
 import React from "react";
 import { Animated, Easing, StyleSheet, View } from "react-native";
-
+import { route } from "../../../common/util/annotation";
 /**
  * 旋转的动画
  */
 
+@route("艾佳页面", "AiJia", "旋转动画", "Rotate")
 export default class Rotate extends React.Component<any, any> {
   constructor(props) {
     super(props);

@@ -1,6 +1,8 @@
 import React from "react";
 import { Animated, Easing, StyleSheet, View, Text } from "react-native";
-export default class FadeInView extends React.Component<any, any> {
+import { route } from "../../../common/util/annotation";
+@route("艾佳页面", "AiJia", "直线运动", "StraightLine")
+export default class StraightLine extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
