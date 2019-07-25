@@ -12,7 +12,14 @@ class Share extends Component<any, any> {
 
   renderShare() {
     return (
-      <SharePanelComponent ref="shareModal" iconList={["好友", "朋友圈"]} />
+      <SharePanelComponent
+        ref="shareModal"
+        iconList={["好友", "朋友圈"]}
+        desc={"描述信息"}
+        imgUrl={"图片地址"}
+        title={"标题"}
+        shareUrl={"分享的url"}
+      />
     );
   }
 
