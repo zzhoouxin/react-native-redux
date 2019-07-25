@@ -13,6 +13,8 @@
     "react": "16.8.3",
     "react-native": "0.59.8",
     "react-native-gesture-handler": "^1.2.1",
+    "react-native-share": "^2.0.0",
+    "react-native-zhouxinzz": "^1.0.0",
     "react-navigation": "^3.10.1",
     "react-redux": "^7.1.0",
     "redux": "^4.0.1",

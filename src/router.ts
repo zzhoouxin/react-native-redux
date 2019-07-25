@@ -27,6 +27,7 @@ import "./page/aijia/Animated/allControl"; //全部控制
 import "./page/aijia/Animated/continue"; //持续的动画
 import "./page/aijia/Animated/dontKonw"; //全部控制
 import "./page/aijia/Animated/zhouxin";
+import "./page/aijia/Animated/share";
 
 import RouteContainer from "./common/util/routeContainer";
 
