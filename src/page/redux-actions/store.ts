@@ -13,7 +13,7 @@ const initDataList = async () => {
     ];
     setTimeout(() => {
       resvole(dataList);
-    }, 100);
+    }, 5000);
   });
 };
 
