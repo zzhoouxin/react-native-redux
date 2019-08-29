@@ -9,7 +9,10 @@ import {
 const fill_width = Dimensions.get("window").width;
 const dataList = [
   { id: 1, name: "useState正常使用", url: "HookUsState" },
-  { id: 2, name: "hook自定义函数提取公共函数", url: "HookUsState2" }
+  { id: 2, name: "hook自定义函数提取公共函数", url: "HookUsState2" },
+  { id: 3, name: "使用useEffect", url: "useEffect" },
+  { id: 4, name: "使用useContext", url: "useContext" },
+  { id: 5, name: "使用reducer", url: "useReducer" }
 ];
 
 export default class Hook extends Component<any, any> {

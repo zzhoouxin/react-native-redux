@@ -8,6 +8,10 @@ import One from "./page/redux-actions"; //使用redux-actions基础
 import Hook from "./page/hook"; //hook的主页
 import { ColoreBanner } from "./page/hook/one"; //hook基本的改变颜色
 import { ColoreBanner2 } from "./page/hook/two"; //自定义hook提取公共方法
+import demo from "./page/hook/three"; //自定义hook提取公共方法
+import useContext from "./page/hook/three/useContext1"; //
+import useReducer from "./page/hook/three/useReducer"; //
+
 import "./page/aijia/modal"; //编写modal的类
 
 import "./page/hoc/loading"; //编写modal的类
@@ -50,7 +54,10 @@ let defaultData = {
   Index: Index,
   Hook: Hook,
   HookUsState: ColoreBanner,
-  HookUsState2: ColoreBanner2
+  HookUsState2: ColoreBanner2,
+  useEffect: demo,
+  useContext: useContext,
+  useReducer: useReducer
 };
 
 let createStack = Object.assign(defaultData, urlData);
