@@ -12,7 +12,8 @@ const dataList = [
   { id: 2, name: "hook自定义函数提取公共函数", url: "HookUsState2" },
   { id: 3, name: "使用useEffect", url: "useEffect" },
   { id: 4, name: "使用useContext", url: "useContext" },
-  { id: 5, name: "使用reducer", url: "useReducer" }
+  { id: 5, name: "使用reducer", url: "useReducer" },
+  { id: 6, name: "使用ReduxDemo", url: "ReduxDemo" }
 ];
 
 export default class Hook extends Component<any, any> {

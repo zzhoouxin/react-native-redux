@@ -11,6 +11,7 @@ import { ColoreBanner2 } from "./page/hook/two"; //自定义hook提取公共方�
 import demo from "./page/hook/three"; //自定义hook提取公共方法
 import useContext from "./page/hook/three/useContext1"; //
 import useReducer from "./page/hook/three/useReducer"; //
+import ReduxDemo from "./page/hook/redux"; //
 
 import "./page/aijia/modal"; //编写modal的类
 
@@ -57,7 +58,8 @@ let defaultData = {
   HookUsState2: ColoreBanner2,
   useEffect: demo,
   useContext: useContext,
-  useReducer: useReducer
+  useReducer: useReducer,
+  ReduxDemo: ReduxDemo
 };
 
 let createStack = Object.assign(defaultData, urlData);
